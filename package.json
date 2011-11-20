@@ -1,0 +1,23 @@
+{
+  "author": "Kilian Ciuffolo <me@nailik.org> (http://nailik.org)",
+  "name": "introspect",
+  "main" : "./lib/introspect/introspect.js",
+  "description": "A fast and powerful Function introspection",
+  "keywords": ["reflection", "introspection", "arguments", "args"],
+  "version": "0.0.1",
+  "engines": {
+    "node": ">= v0.4.7"
+  },
+  "scripts": {
+    "test": "vows test/*-test.js --spec",
+    "benchmark": "node lib/introspect/introspect-benchmark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/kilianc/node-introspect.git"
+  },
+  "devDependencies": {
+    "vows": "0.5.x >= 0.5.13",
+    "cli-table": ""
+  }
+}
