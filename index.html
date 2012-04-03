@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>introspect by kilianc</title>
+    
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>introspect</h1>
+        <p>A nodejs fast and powerful Function introspection</p>
+        <p class="view"><a href="https://github.com/kilianc/node-introspect">View the Project on GitHub <small>kilianc/node-introspect</small></a></p>
+        <ul>
+          <li><a href="https://github.com/kilianc/node-introspect/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/kilianc/node-introspect/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/kilianc/node-introspect">Fork On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>introspect <img src="http://dl.dropbox.com/u/2208502/maintained.png" alt="project status">
+</h1>
+
+<p>A nodejs fast and powerful Function introspection.</p>
+
+<h2>Engine</h2>
+
+<ul>
+<li>nodejs v0.4.12+ (tested with v0.6.x)</li>
+</ul><h2>Installation with npm</h2>
+
+<pre><code>$ npm install introspect
+</code></pre>
+
+<h2>Syntax</h2>
+
+<div class="highlight">
+<pre><span class="nx">introspect</span><span class="p">(</span><span class="nx">fn</span><span class="p">);</span>
+</pre>
+</div>
+
+
+<h2>Parameters</h2>
+
+<ol>
+<li>
+<code>fn</code> <em>(Function)</em>: a function to be introspected</li>
+</ol><h2>Notes</h2>
+
+<p>Introspect returns an array of all the function parameters names</p>
+
+<h2>Example</h2>
+
+<div class="highlight">
+<pre><span class="kd">var</span> <span class="nx">introspect</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'introspect'</span><span class="p">);</span>
+
+<span class="kd">function</span> <span class="nx">fn</span> <span class="p">(</span><span class="nx">foo</span><span class="p">,</span> <span class="nx">bar</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// function body</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">arguments</span> <span class="o">=</span> <span class="nx">introspect</span><span class="p">(</span><span class="nx">fn</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);</span> <span class="c1">// ["foo", "bar", "callback"]</span>
+</pre>
+</div>
+
+
+<h2>Benchmark</h2>
+
+<p>Benchmark results are pretty good.</p>
+
+<pre><code>npm run-script benchmark
+</code></pre>
+
+<p><img src="http://f.cl.ly/items/2L2G183k1Z071C3a3E3x/introspect_v0.0.1.png" alt="profile"></p>
+
+<h2>Test</h2>
+
+<p>Tests depends on <a href="http://vowsjs.org/">http://vowsjs.org/</a> then</p>
+
+<pre><code>npm install -g vows
+npm install
+npm test
+</code></pre>
+
+<p><img src="http://f.cl.ly/items/2G2V0M3A1C423q1v1E3V/introspect_v0.0.1.png" alt="tests"></p>
+
+<h2>License</h2>
+
+<p><em>This software is released under the MIT license cited below</em>.</p>
+
+<pre><code>Copyright (c) 2010 Kilian Ciuffolo, me@nailik.org. All Rights Reserved.
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the 'Software'), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/kilianc">kilianc</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+  </body>
+</html>
