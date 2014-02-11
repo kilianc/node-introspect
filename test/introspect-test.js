@@ -22,6 +22,9 @@ vows.describe('introspect/main').addBatch({
         for(var b = 0; b < 1000; b ++) { }
         if (a == 5) { }
       }), ['foo', 'bar', 'callback']);
+    },
+    'with no arguments': function () {
+      assert.deepEqual(introspect( function () {} ), []);
     }
   }
 }).export(module);
