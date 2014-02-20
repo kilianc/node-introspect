@@ -4,7 +4,7 @@
   "main" : "./lib/introspect/introspect.js",
   "description": "A fast and powerful Function introspection",
   "keywords": ["reflection", "introspection", "arguments", "args"],
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "node": ">= v0.4.7"
   },
