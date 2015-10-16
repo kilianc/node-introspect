@@ -1,3 +1,4 @@
+'use strict';
 var
   vows = require('vows'),
   assert = require('assert'),
@@ -26,6 +27,17 @@ vows.describe('introspect/main').addBatch({
     'with no arguments': function () {
       assert.deepEqual(introspect(function () {}), []);
       assert.deepEqual(introspect(function ( ) {   }), []);
+    },
+    'with class with no ctor': function () {
+      assert.deepEqual(introspect(class NoCtor{}), []);
+      assert.deepEqual(introspect(class NoCtor2 {    }), []);
+    },
+    'with class with ctor with no arguments': function () {
+      assert.deepEqual(introspect(class EmptyCtor{ constructor(){}}), []);
+      assert.deepEqual(introspect(class EmptyCtor2{ constructor(     ){  }}), []);
+    },
+    'with class with ctor with arguments': function () {
+      assert.deepEqual(introspect(class CtorWithArgs{ constructor(foo,bar,callback){  }}), ['foo','bar','callback']);
     }
   }
 }).export(module);
