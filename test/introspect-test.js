@@ -38,6 +38,10 @@ vows.describe('introspect/main').addBatch({
     },
     'with class with ctor with arguments': function () {
       assert.deepEqual(introspect(class CtorWithArgs{ constructor(foo,bar,callback){  }}), ['foo','bar','callback']);
+    },
+    'with class with ineherited ctor': function () {
+      class CtorWithArgs{ constructor(foo,bar,callback){  }}
+      assert.deepEqual(introspect(class InheritedCtor extends CtorWithArgs{}), ['foo','bar','callback']);
     }
   }
 }).export(module);
