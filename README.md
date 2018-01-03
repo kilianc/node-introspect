@@ -16,15 +16,15 @@ A fast and powerful Function introspection. This is such a kind of experiment, a
 introspect(fn);
 ```
 
-##Parameters
+## Parameters
 
 1. `fn` _(Function)_: a function to be introspected
 
-##Notes
+## Notes
 
 Introspect returns an array of all the function parameters names
 
-##Example
+## Example
 
 ```javascript
 var introspect = require('introspect');
